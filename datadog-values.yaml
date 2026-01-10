@@ -1,0 +1,42 @@
+datadog:
+  site: datadoghq.eu
+  apiKeyExistingSecret: datadog-secret
+
+  # APM (Tracing) Enabled
+  apm:
+    enabled: true
+    instrumentation:
+      enabled: true   # auto-injection for runtimes
+
+  # Logs Disabled
+  logs:
+    enabled: false
+
+  # Optional Platform-level Observability
+  serviceMonitoring:
+    enabled: true     # USM - HTTP/TCP service topology
+
+  networkMonitoring:
+    enabled: true     # eBPF-based network visibility
+
+  processAgent:
+    enabled: true
+
+  containerRuntime:
+    enabled: true
+
+# System Probe required for USM + eBPF
+systemProbe:
+  enabled: true
+  seccompProfileEnabled: false
+  appArmorProfileEnabled: false
+
+# Admission webhook for auto-instrumentation
+admissionController:
+  enabled: true
+  mutateUnlabelled: true
+  failurePolicy: Ignore
+
+# Cluster agent for metadata + service graph
+clusterAgent:
+  enabled: true
