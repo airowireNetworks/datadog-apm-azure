@@ -1,4 +1,4 @@
-aks_cluster_name     = "aks1"
-aks_resource_group   = "saqlain"
+aks_cluster_name     = "CLUSTER NAME"
+aks_resource_group   = "RESOURCE GROUP NAME"
 env                  = "dev"
-datadog_api_key      = "4c7890c7a1f821ef09006bdecc0ce580"
+datadog_api_key      = "##########################"
