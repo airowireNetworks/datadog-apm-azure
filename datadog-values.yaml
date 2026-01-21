@@ -3,36 +3,36 @@ datadog:
   apiKeyExistingSecret: datadog-secret
 
   logs:
-    enabled: true
+    enabled: true   # Turn to false if you don't need log collection
     containerCollectAll: true
 
   apm:
-    enabled: true
+    enabled: true   # Turn to false if you don't need APM tracing
     instrumentation:
       enabled: true
 
   serviceMonitoring:
-    enabled: true
+    enabled: true   # Turn to false if you don't need service monitoring
 
   networkMonitoring:
-    enabled: true
+    enabled: true   # Turn to false if you don't need network monitoring
 
   processAgent:
-    enabled: true
+    enabled: true   # Turn to false if you don't need process monitoring
 
   containerRuntime:
-    enabled: true
+    enabled: true   # Turn to false if you don't need container runtime metrics
 
 systemProbe:
-  enabled: true
+  enabled: true         # Turn to false if you don't need system probe
   sysctlEnabled: true
   seccompProfileEnabled: false
   appArmorProfileEnabled: false
 
 admissionController:
-  enabled: true
+  enabled: true         # Turn to false if you don't need admission controller
   mutateUnlabelled: true
   failurePolicy: Ignore
 
 clusterAgent:
-  enabled: true
+  enabled: true         # Turn to false if you don't need the cluster agent
